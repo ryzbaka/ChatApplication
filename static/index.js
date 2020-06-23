@@ -191,7 +191,7 @@ const colors = [
       }
       form.elements[1].value = "";
     });
-    socket.on("my response", (message) => {
+    socket.on("my response", (message) => { //this is triggerred by server socket
       //when the server receives a json object containing
       //the username and the message, the server triggers a 'my response' event which then tell client side to add
       //the username and message to the clientside
