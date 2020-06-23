@@ -20,7 +20,7 @@ def sessions():
 def messageReceived(methods=['GET','POST']):
     print('message was received!')
 
-@socketio.on('my event')
+@socketio.on('my event') #this event is triggered by client side socket
 def handle_custom_event(json,methods=['GET','POST']): #triggered when 'my event' occurs.
     print('received my event: '+str(json)) # print received json object to terminal
     socketio.emit('my response',json, callback=messageReceived) # send the json object to "my response" event
